@@ -24,3 +24,10 @@ icon.type="image/gif"
 icon.sizes="16x16"
  UnblockedSite.document.head.appendChild(icon); 
 }
+var input = document.getElementById("redirect");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("enter").click();
+  }
+});
