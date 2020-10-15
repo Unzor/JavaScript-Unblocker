@@ -64,10 +64,12 @@ icon.sizes="16x16"
 }
 </script>
 <script>
-  $(".input1").on('keyup', function (e) {
-    if (e.key === 'Enter' || e.keyCode === 13) {
-        document.getElementById("enter").click();
-    }
+var input = document.getElementById("redirect");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("enter").click();
+  }
 });
 </script>
 </body>
